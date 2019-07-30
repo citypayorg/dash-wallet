@@ -43,13 +43,18 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.Loader;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.common.collect.ImmutableList;
@@ -76,6 +81,8 @@ import de.schildbach.wallet.WalletApplication;
 import de.schildbach.wallet.WalletBalanceWidgetProvider;
 import de.schildbach.wallet.data.PaymentIntent;
 import de.schildbach.wallet.data.WalletLock;
+import de.schildbach.wallet.service.BlockchainState;
+import de.schildbach.wallet.service.BlockchainStateLoader;
 import de.schildbach.wallet.ui.InputParser.BinaryInputParser;
 import de.schildbach.wallet.ui.InputParser.StringInputParser;
 import de.schildbach.wallet.ui.preference.PreferenceActivity;
@@ -98,12 +105,15 @@ public final class WalletActivity extends AbstractBindServiceActivity
         EnableFingerprintDialog.OnFingerprintEnabledListener,
         EncryptKeysDialogFragment.OnOnboardingCompleteListener,
         DialogInterface.OnDismissListener {
+
     private static final int DIALOG_BACKUP_WALLET_PERMISSION = 0;
     private static final int DIALOG_RESTORE_WALLET_PERMISSION = 1;
     private static final int DIALOG_RESTORE_WALLET = 2;
     private static final int DIALOG_TIMESKEW_ALERT = 3;
     private static final int DIALOG_VERSION_ALERT = 4;
     private static final int DIALOG_LOW_STORAGE_ALERT = 5;
+
+    private static final int ID_BLOCKCHAIN_STATE_LOADER = 1;
 
     private WalletApplication application;
     private Configuration config;
@@ -129,6 +139,9 @@ public final class WalletActivity extends AbstractBindServiceActivity
 
     private boolean showBackupWalletDialog = false;
 
+    private boolean initComplete = false;
+    private LoaderManager loaderManager;
+
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -143,6 +156,8 @@ public final class WalletActivity extends AbstractBindServiceActivity
         if (savedInstanceState == null) {
             checkAlerts();
         }
+
+        this.loaderManager = LoaderManager.getInstance(this);
 
         veryFirstLaunch = !config.hasBeenUsed();
         config.touchLastUsed();
@@ -225,6 +240,7 @@ public final class WalletActivity extends AbstractBindServiceActivity
                 handleRequestCoins();
             }
         });
+        findViewById(R.id.sync_status_pane).setVisibility(View.GONE);
     }
 
     private void initQuickActions() {
@@ -282,6 +298,13 @@ public final class WalletActivity extends AbstractBindServiceActivity
     @Override
     protected void onResume() {
         super.onResume();
+
+        if (!initComplete) {
+            loaderManager.initLoader(ID_BLOCKCHAIN_STATE_LOADER, null, blockchainStateLoaderCallbacks);
+            initComplete = true;
+        } else {
+            loaderManager.restartLoader(ID_BLOCKCHAIN_STATE_LOADER, null, blockchainStateLoaderCallbacks);
+        }
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -1144,4 +1167,41 @@ public final class WalletActivity extends AbstractBindServiceActivity
     public void onDismiss(DialogInterface dialog) {
         showHideSecureAction();
     }
+
+
+    boolean ignoreFirstShotFlag = true;
+
+    private final LoaderManager.LoaderCallbacks<BlockchainState> blockchainStateLoaderCallbacks = new LoaderManager.LoaderCallbacks<BlockchainState>() {
+        @Override
+        public Loader<BlockchainState> onCreateLoader(final int id, final Bundle args) {
+            return new BlockchainStateLoader(WalletActivity.this);
+        }
+
+        @Override
+        public void onLoadFinished(@NonNull final Loader<BlockchainState> loader, final BlockchainState blockchainState) {
+            if (ignoreFirstShotFlag) {
+                ignoreFirstShotFlag = false;
+                return;
+            }
+
+//            if (blockchainState.bestChainHeight == config.getBestChainHeightEver()) {
+//                findViewById(R.id.sync_status_pane).setVisibility(View.GONE);
+//            } else if (blockchainState.replaying) {
+//                findViewById(R.id.sync_status_pane).setVisibility(View.VISIBLE);
+//            }
+//            findViewById(R.id.sync_status_pane).setVisibility(View.VISIBLE);
+            ProgressBar syncProgressView = findViewById(R.id.sync_status_progress);
+            int percentage = blockchainState.percentageSync;
+            findViewById(R.id.sync_status_pane).setVisibility(percentage < 100 ? View.VISIBLE : View.GONE);
+            if (percentage != syncProgressView.getProgress()) {
+                syncProgressView.setProgress(percentage);
+                TextView syncPercentageView = findViewById(R.id.sync_status_percentage);
+                syncPercentageView.setText(percentage + "%");
+            }
+        }
+
+        @Override
+        public void onLoaderReset(@NonNull final Loader<BlockchainState> loader) {
+        }
+    };
 }
