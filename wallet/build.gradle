@@ -50,7 +50,6 @@ dependencies {
 
     implementation project(path: ':common')
     annotationProcessor 'androidx.room:room-compiler:2.1.0'
-
     //Uphold Integration
     implementation project(path: ':uphold-integration')
 

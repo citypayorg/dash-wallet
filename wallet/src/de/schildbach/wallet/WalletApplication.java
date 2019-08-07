@@ -66,6 +66,7 @@ import android.media.AudioAttributes;
 import android.net.Uri;
 import android.os.Build;
 import android.os.StrictMode;
+import android.os.SystemClock;
 import android.preference.PreferenceManager;
 import androidx.annotation.StringRes;
 import androidx.multidex.MultiDexApplication;
@@ -193,6 +194,7 @@ public class WalletApplication extends MultiDexApplication {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             createNotificationChannels();
         }
+        WalletLock.getInstance().setConfiguration(config);
     }
 
     private void registerScreenOffReceiver() {
@@ -630,7 +632,9 @@ public class WalletApplication extends MultiDexApplication {
 
     public void lockWalletIfNeeded() {
         WalletLock walletLock = WalletLock.getInstance();
-        if (walletLock.isWalletLocked(wallet)) {
+        boolean recentReboot = SystemClock.elapsedRealtime() < WalletLock.DEFAULT_LOCK_TIMER_MILLIS &&
+                config.getLastUnlockTime() < (System.currentTimeMillis() - SystemClock.elapsedRealtime());
+        if (walletLock.isWalletLocked(wallet) || recentReboot) {
             walletLock.setWalletLocked(true);
         }
     }
