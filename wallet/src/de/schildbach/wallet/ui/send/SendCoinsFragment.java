@@ -40,7 +40,7 @@ import org.bitcoinj.core.TransactionConfidence.ConfidenceType;
 import org.bitcoinj.core.TransactionLockRequest;
 import org.bitcoinj.core.TransactionOutput;
 import org.bitcoinj.core.VerificationException;
-import org.bitcoinj.core.VersionedChecksummedBytes;
+import org.bitcoinj.core.PrefixedChecksummedBytes;
 import org.bitcoinj.protocols.payments.PaymentProtocol;
 import org.bitcoinj.uri.BitcoinURI;
 import org.bitcoinj.uri.BitcoinURIParseException;
@@ -1483,7 +1483,7 @@ public final class SendCoinsFragment extends Fragment {
                 receivingStaticAddressView.setText(WalletUtils.formatAddress(validatedAddress.address,
                         Constants.ADDRESS_FORMAT_GROUP_SIZE, Constants.ADDRESS_FORMAT_LINE_SIZE));
                 final String addressBookLabel = AddressBookProvider.resolveLabel(activity,
-                        validatedAddress.address.toBase58());
+                        validatedAddress.address.toString());
                 final String staticLabel;
                 if (addressBookLabel != null)
                     staticLabel = addressBookLabel;
@@ -1724,7 +1724,7 @@ public final class SendCoinsFragment extends Fragment {
             }
 
             @Override
-            protected void handlePrivateKey(final VersionedChecksummedBytes key) {
+            protected void handlePrivateKey(final PrefixedChecksummedBytes key) {
                 throw new UnsupportedOperationException();
             }
 

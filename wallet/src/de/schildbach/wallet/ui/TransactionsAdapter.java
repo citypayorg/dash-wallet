@@ -332,7 +332,7 @@ public class TransactionsAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                 else
                     address = WalletUtils.getWalletAddressOfReceived(tx, wallet);
                 final String addressLabel = address != null
-                        ? AddressBookProvider.resolveLabel(context, address.toBase58()) : null;
+                        ? AddressBookProvider.resolveLabel(context, address.toString()) : null;
 
                 txCache = new TransactionCacheEntry(value, sent, self, showFee, address, addressLabel, isIX, isLocked);
                 transactionCache.put(tx.getHash(), txCache);
@@ -432,7 +432,7 @@ public class TransactionsAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             } else if (txCache.address != null) {
                 addressView.setTypeface(defaultTypeface);
                 if (!itemView.isActivated()) {
-                    String address = txCache.address.toBase58();
+                    String address = txCache.address.toString();
                     StringBuilder addressBuilder = new StringBuilder(address.substring(0,
                             Constants.ADDRESS_FORMAT_FIRST_SECTION_SIZE));
                     addressBuilder.append(Constants.ADDRESS_FORMAT_SECTION_SEPARATOR);

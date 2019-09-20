@@ -31,7 +31,7 @@ import java.util.regex.Pattern;
 import javax.annotation.Nullable;
 
 import org.bitcoinj.core.Address;
-import org.bitcoinj.core.ScriptException;
+import org.bitcoinj.script.ScriptException;
 import org.bitcoinj.core.Transaction;
 import org.bitcoinj.core.Transaction.Purpose;
 import org.bitcoinj.core.TransactionConfidence.ConfidenceType;
@@ -336,7 +336,7 @@ public class WalletTransactionsFragment extends Fragment implements LoaderManage
                 .findItem(R.id.wallet_transactions_context_edit_address);
         if (!txRotation && txAddress != null) {
             editAddressMenuItem.setVisible(true);
-            final boolean isAdd = AddressBookProvider.resolveLabel(activity, txAddress.toBase58()) == null;
+            final boolean isAdd = AddressBookProvider.resolveLabel(activity, txAddress.toString()) == null;
             final boolean isOwn = wallet.isPubKeyHashMine(txAddress.getHash160());
 
             if (isOwn)
