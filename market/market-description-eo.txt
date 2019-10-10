@@ -15,7 +15,7 @@ Vi povas trovi pli pri Bitmono ĉe
 http://darkcoin.io
 
 Se vi volas kontribui al Dash Wallet, la projekto lokas ĉe
-https://github.com/HashEngineering/darkcoin-wallet
+https://github.com/CityPayOrg/darkcoin-wallet
 
 Licenco: GPLv3
 Uzu je via propra risko!

@@ -21,7 +21,7 @@ Carteira Dash é <b>open source</b> e um <b>software livre</b>. Licença: GPLv3
 https://www.gnu.org/licenses/gpl-3.0.en.html
 
 Nosso código fonte está disponível no GitHub:
-https://github.com/HashEngineering/dash-wallet
+https://github.com/CityPayOrg/dash-wallet
 
 Todas as traduções são gerenciadas por meio do Transifex:
 https://www.transifex.com/dash/dash-wallet/

@@ -21,7 +21,7 @@
 https://www.gnu.org/licenses/gpl-3.0.en.html
 
 کدهای ما در گیت‌هاب موجود است:
-https://github.com/HashEngineering/dash-wallet
+https://github.com/CityPayOrg/dash-wallet
 
 ترجمه‌ها از طریق سامانه ترنسیفکس صورت می‌گیرد:
 https://www.transifex.com/dash/dash-wallet/

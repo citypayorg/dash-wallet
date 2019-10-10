@@ -308,7 +308,7 @@ v0.1.2-beta
 * added two nodes from a list of addnodes from the bitcointalk topic
 
 v0.1.1-beta
-* renamed to hashengineering.digitalcoin.wallet
+* renamed to citypayorg.digitalcoin.wallet
 * added support for importing Bitcoin Private Keys from first digitalcoin app (Crypto-Expert)
 
 v1.0.1.5
@@ -639,7 +639,7 @@ v4.32
 
 * Bugfixes.
 * In-app payments integration (integration-android) now available on Maven Central and jCenter.
-  Also see: https://github.com/HashEngineering/dash-wallet/wiki/InAppPayments
+  Also see: https://github.com/CityPayOrg/dash-wallet/wiki/InAppPayments
 
 v4.31
 

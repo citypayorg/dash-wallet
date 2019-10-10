@@ -21,7 +21,7 @@
 https://www.gnu.org/licenses/gpl-3.0.en.html
 
 لدينا شفرة المصدر هو متاح في جيثب:
-https://github.com/HashEngineering/dash-wallet
+https://github.com/CityPayOrg/dash-wallet
 
 تتم إدارة جميع الترجمات عبر ترانسيفيكس:
 https://www.transifex.com/dash/dash-wallet/

@@ -15,7 +15,7 @@ FEATURES:
 לפרטים נוספים : http://darkcoin.io
 
 אם אתה רוצה לתרום לפרויקט ארנק הביטקוין, הפרויקט ממוקם ב
-https://github.com/HashEngineering/darkcoin-wallet
+https://github.com/CityPayOrg/darkcoin-wallet
 
 רישיון : GPLv3
 שים לב: השימוש הוא באחריות המשתמש.

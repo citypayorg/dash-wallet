@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:1039839682638:android:989eecd6db36de6a",
         "android_client_info": {
-          "package_name": "hashengineering.darkcoin.wallet"
+          "package_name": "citypayorg.darkcoin.wallet"
         }
       },
       "oauth_client": [
@@ -39,7 +39,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:1039839682638:android:67503b93d496d1db",
         "android_client_info": {
-          "package_name": "hashengineering.darkcoin.wallet.devnet"
+          "package_name": "citypayorg.darkcoin.wallet.devnet"
         }
       },
       "oauth_client": [
@@ -68,7 +68,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:1039839682638:android:3202b16d460a1a88",
         "android_client_info": {
-          "package_name": "hashengineering.darkcoin.wallet_test"
+          "package_name": "citypayorg.darkcoin.wallet_test"
         }
       },
       "oauth_client": [
@@ -97,7 +97,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:1039839682638:android:3cb62fcbd8b7d447",
         "android_client_info": {
-          "package_name": "hashengineering.dash.wallet.beta"
+          "package_name": "citypayorg.dash.wallet.beta"
         }
       },
       "oauth_client": [

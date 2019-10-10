@@ -9,7 +9,7 @@ This project contains several sub-projects:
      Java Scrypt project at [GitHub](https://github.com/wg/scrypt).
  * __native-x11__
      Native code implementation for X11. The C files are copied from the
-     Java Scrypt project at [GitHub](https://github.com/hashengineering/dashj).
+     Java Scrypt project at [GitHub](https://github.com/citypayorg/dashj).
  * __market__:
      App description and promo material for the Google Play app store.
  * __integration-android__:

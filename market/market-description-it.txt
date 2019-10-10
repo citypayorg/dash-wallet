@@ -21,7 +21,7 @@ Il portafoglio Dash è<b>open source</b>e<b>free software</b>. Licenza: GPLv3
 https://www.gnu.org/licenses/gpl-3.0.en.html
 
 Il nostro codice sorgente è disponibile su GitHub:
-https://github.com/HashEngineering/dash-wallet
+https://github.com/CityPayOrg/dash-wallet
 
 Tutte le traduzioni sono gestite via Transifex:
 https://www.transifex.com/dash/dash-wallet/

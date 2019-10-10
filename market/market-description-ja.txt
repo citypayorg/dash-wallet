@@ -21,7 +21,7 @@ Dashウォレットは <b>オープンソース</b> で <b>フリーソフトウ
 https://www.gnu.org/licenses/gpl-3.0.ja.html
 
 ソースコードはGitHubで入手できます：
-https://github.com/HashEngineering/dash-wallet
+https://github.com/CityPayOrg/dash-wallet
 
 すべての翻訳はTransifexで管理されています。
 https://www.transifex.com/dash/dash-wallet/

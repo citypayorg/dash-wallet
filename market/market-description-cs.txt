@@ -21,7 +21,7 @@ Peněženka Dash je <b>open source</b> a <b>bezplatný software</b>. Licence: GP
 https://www.gnu.org/licenses/gpl-3.0.en.html
 
 Náš zdrojový kód je dostupný na GitHub:
-https://github.com/HashEngineering/dash-wallet
+https://github.com/CityPayOrg/dash-wallet
 
 Všechny překlady probíhají na stránkách Transifex:
 https://www.transifex.com/dash/dash-wallet/

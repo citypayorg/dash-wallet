@@ -21,7 +21,7 @@ Ví Dash là <b>mã nguồn mở</b> và <b>phần mềm dùng tự do</b>. Theo
 https://www.gnu.org/licenses/gpl-3.0.en.html
 
 Mã nguồn có thể tìm thấy ở GitHub:
-https://github.com/HashEngineering/dash-wallet
+https://github.com/CityPayOrg/dash-wallet
 
 Tất cả các bản dịch được thực hiện thông qua Transifex:
 https://www.transifex.com/dash/dash-wallet/

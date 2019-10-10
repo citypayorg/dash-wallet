@@ -21,7 +21,7 @@ Dash Wallet <b>açık kaynak kodlu</b> <b>ücretsiz bir yazılımdır</b>. Lisan
 https://www.gnu.org/licenses/gpl-3.0.en.html
 
 Kaynak kodumuz GitHub'da mevcuttur:
-https://github.com/HashEngineering/dash-wallet
+https://github.com/CityPayOrg/dash-wallet
 
 Tüm çeviriler Transifex aracılığıyla yönetilmektedir:
 https://www.transifex.com/dash/dash-wallet/

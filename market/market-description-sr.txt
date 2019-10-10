@@ -21,7 +21,7 @@ Dash novčanik je <b>open source</b> i <b>besplatan softver</b>. Licenca: GPLv3
 https://www.gnu.org/licenses/gpl-3.0.en.html
 
 Naš source code možete naći na GitHub-u:
-https://github.com/HashEngineering/dash-wallet
+https://github.com/CityPayOrg/dash-wallet
 
 Svi prevodi su organizovani kroz Transifex:
 https://www.transifex.com/dash/dash-wallet/

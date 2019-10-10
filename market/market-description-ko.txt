@@ -21,7 +21,7 @@
 https://www.gnu.org/licenses/gpl-3.0.en.html
 
 소스 코드는 깃허브(GitHub)에서 볼 수 있습니다.
-https://github.com/HashEngineering/dash-wallet
+https://github.com/CityPayOrg/dash-wallet
 
 모든 번역은 Transifex 웹사이트를 통해 이루어집니다.
 https://www.transifex.com/dash/dash-wallet/

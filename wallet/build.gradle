@@ -145,16 +145,16 @@ android {
     flavorDimensions "default"
     productFlavors {
         beta {
-            applicationId = "hashengineering.dash.wallet.beta"
+            applicationId = "citypayorg.dash.wallet.beta"
         }
         prod {
-            applicationId = "hashengineering.darkcoin.wallet"
+            applicationId = "citypayorg.darkcoin.wallet"
         }
         _testNet3 {
-            applicationId = "hashengineering.darkcoin.wallet_test"
+            applicationId = "citypayorg.darkcoin.wallet_test"
         }
         devNet {
-            applicationId = "hashengineering.darkcoin.wallet.devnet"
+            applicationId = "citypayorg.darkcoin.wallet.devnet"
         }
     }
     externalNativeBuild {

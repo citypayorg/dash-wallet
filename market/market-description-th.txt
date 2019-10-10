@@ -21,7 +21,7 @@ Dash Wallet คือ <b>เปิด source</b>และ <b>ฟรีซอฟ�
 https://www.gnu.org/licenses/gpl-3.0.en.html
 
 แหล่งโค้ดของเราอยู่ที่ GitHub:
-https://github.com/HashEngineering/dash-wallet
+https://github.com/CityPayOrg/dash-wallet
 
 การแปลภาษาทั้งหมดถูกจัดการผ่าน Transifex
 https://www.transifex.com/dash/dash-wallet/

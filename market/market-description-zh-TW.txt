@@ -21,7 +21,7 @@
 https://www.gnu.org/licenses/gpl-3.0.en.html
 
 我們的源代碼在GitHub上提供:
-https://github.com/HashEngineering/dash-wallet
+https://github.com/CityPayOrg/dash-wallet
 
 所有翻譯均通過Transifex進行管理:
 https://www.transifex.com/dash/dash-wallet/

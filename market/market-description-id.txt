@@ -21,7 +21,7 @@ Dash Wallet adalah <b>sumber terbuka</b> dan <b>perangkat lunak bebas</b>. Lisen
 https://www.gnu.org/licenses/gpl-3.0.en.html
 
 Kode sumber kami tersedia di GitHub:
-https://github.com/HashEngineering/dash-wallet
+https://github.com/CityPayOrg/dash-wallet
 
 Semua terjemahan dikelola melalui Transifex:
 https://www.transifex.com/dash/dash-wallet/

@@ -42,7 +42,7 @@ jint JNI_OnLoad(JavaVM *vm, void *reserved) {
         return -1;
     }
 
-    jclass cls = (env)->FindClass("com/hashengineering/crypto/X11");
+    jclass cls = (env)->FindClass("com/citypayorg/crypto/X11");
     int r = (env)->RegisterNatives(cls, methods, 1);
 
     return (r == JNI_OK) ? JNI_VERSION_1_6 : -1;

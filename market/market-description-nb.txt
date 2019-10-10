@@ -20,7 +20,7 @@ Dash Wallet har <b>åpen kildekode</b> og er <b>fri programvare</b>. Lisens: GPL
 https://www.gnu.org/licenses/gpl-3.0.en.html
 
 Vår kildekode er tilgjengelig på GitHub:
-https://github.com/HashEngineering/darkcoin-wallet
+https://github.com/CityPayOrg/darkcoin-wallet
 
 Alle oversettelser skjer via Transifex:
 https://www.transifex.com/dash/dash-wallet/

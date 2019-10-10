@@ -21,7 +21,7 @@ Dash Wallet bazuje na <b>open source</b> oraz <b>free software</b>. Licencja: GP
 https://www.gnu.org/licenses/gpl-3.0.en.html
 
 Kod źródłowy jest dostępny na GitHub:
-https://github.com/HashEngineering/dash-wallet
+https://github.com/CityPayOrg/dash-wallet
 
 Do zarządzania tłumaczeniami wykorzystano portal Transifex:
 https://www.transifex.com/dash/dash-wallet/
